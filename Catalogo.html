@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Optimización PeakPure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap');
+        
+        :root {
+            --navy: #0A2540;      /* Azul Marino Intenso */
+            --steel: #2C5A7E;     /* Azul Acero Medio / Gris Azulado */
+            --light: #F0F4F8;     /* Gris Claro Plateado / Blanco */
+        }
+        
+        * { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 200ms; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .navy-bg { background-color: #0A2540; }
+        .steel-text { color: #2C5A7E; }
+        .light-bg { background-color: #F0F4F8; }
+        
+        .section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 25px 25px 50px -12px rgb(10 37 64 / 0.15);
+        }
+        
+        .holo-gradient {
+            background: linear-gradient(90deg, #A8B5C4, #D1E0F0, #A8B5C4);
+            background-size: 200% 200%;
+            animation: holographic 4s linear infinite;
+        }
+        
+        @keyframes holographic {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-[#F0F4F8]">
+
+<!-- NAVBAR -->
+<nav class="navy-bg text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-[#0A2540] text-3xl font-bold title-font">P</div>
+            <div class="title-font text-3xl font-bold tracking-tight">PeakPure</div>
+        </div>
+        <a href="https://linktr.ee/peakpure" target="_blank" class="flex items-center gap-3 bg-white text-[#0A2540] px-8 py-4 rounded-3xl font-semibold hover:bg-[#D1E0F0]">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+</nav>
+
+<!-- SLIDE 1: HERO -->
+<section class="section grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+    <div class="light-bg flex items-center px-8 lg:px-16 py-20">
+        <div class="max-w-lg">
+            <div class="flex items-center gap-x-2 text-[#2C5A7E] font-medium uppercase text-sm tracking-widest">
+                <i class="fas fa-vial"></i>
+                CATÁLOGO DE OPTIMIZACIÓN
+            </div>
+            <h1 class="title-font text-6xl font-bold leading-none tracking-[-2px] text-[#0A2540] mt-6">
+                Péptidos PeakPure<br>
+                <span class="text-[#2C5A7E]">Resultados Reales</span>
+            </h1>
+            <p class="text-[#2C5A7E] mt-8 text-xl leading-relaxed">
+                Pureza científica. Resultados clínicos.<br>
+                Cada vial está diseñado para elevar tu rendimiento físico, mental y regenerativo.
+            </p>
+            <div class="flex items-center gap-x-8 mt-12">
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-certificate text-3xl text-[#2C5A7E]"></i>
+                    <div class="font-semibold text-[#0A2540]">Pureza HPLC</div>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-shield-alt text-3xl text-[#2C5A7E]"></i>
+                    <div class="font-semibold text-[#0A2540]">100% Estéril</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navy-bg text-white flex items-center px-8 lg:px-16 py-20">
+        <div class="grid grid-cols-2 gap-6 w-full max-w-2xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 card-hover">
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-3xl">🧠</div>
+                <div class="text-2xl font-semibold">SEMAX</div>
+                <div class="text-[#D1E0F0] text-sm mt-1">$125 • Claridad Mental</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 card-hover">
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-3xl">🧘</div>
+                <div class="text-2xl font-semibold">SELANK</div>
+                <div class="text-[#D1E0F0] text-sm mt-1">$145 • Control de Ansiedad</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 card-hover">
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-3xl">🔥</div>
+                <div class="text-2xl font-semibold">GLOW 70</div>
+                <div class="text-[#D1E0F0] text-sm mt-1">$250 • Regeneración Total</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 card-hover">
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 text-3xl">⚖️</div>
+                <div class="text-2xl font-semibold">RETATRUTIDE</div>
+                <div class="text-[#D1E0F0] text-sm mt-1">$230 • Pérdida de Grasa</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 2: TODOS LOS PRODUCTOS -->
+<section class="section bg-white py-20 px-8 lg:px-16">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-x-3 mb-8">
+            <i class="fas fa-cubes text-3xl text-[#2C5A7E]"></i>
+            <h2 class="title-font text-5xl font-bold text-[#0A2540]">Nuestra Línea de Péptidos</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- SEMAX -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">SEMAX (10 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$125</div>
+                    </div>
+                    <div class="text-4xl">🧠</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Heptapéptido análogo de la ACTH.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Enfoque crítico, mejora de memoria y neuroprotección.</p>
+                <p class="text-xs italic text-[#0A2540]">Notarás una "claridad mental" inmediata. Las tareas complejas se vuelven más sencillas, desaparece la neblina mental.</p>
+            </div>
+
+            <!-- SELANK -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">SELANK (10 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$145</div>
+                    </div>
+                    <div class="text-4xl">🧘</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Péptido sintético derivado de la tuftsina natural.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Control de ansiedad, estabilidad emocional y agudeza mental.</p>
+                <p class="text-xs italic text-[#0A2540]">Calma y control bajo presión sin causar sueño. Te mantiene alerta y sin ruido mental.</p>
+            </div>
+
+            <!-- GLOW 70 -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">GLOW 70 (Tríada Maestra)</h3>
+                        <div class="text-emerald-600 font-semibold">$250</div>
+                    </div>
+                    <div class="text-4xl">🔥</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> BPC-157 + TB-500 + GHK-Cu.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Reparación de tejidos, articulaciones y regeneración de colágeno.</p>
+                <p class="text-xs italic text-[#0A2540]">Dolores crónicos remiten. Recuperación más rápida y piel más firme gracias al cobre.</p>
+            </div>
+
+            <!-- RETATRUTIDE -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">RETATRUTIDE (20 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$230</div>
+                    </div>
+                    <div class="text-4xl">⚖️</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Triple agonista GLP-1, GIP y Glucagón.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Pérdida de grasa acelerada y optimización metabólica.</p>
+                <p class="text-xs italic text-[#0A2540]">Reducción drástica del apetito. Tu cuerpo usa grasa como energía sin fatiga extrema.</p>
+            </div>
+
+            <!-- TIMOSSIN ALPHA 1 -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">TIMOSSIN ALPHA 1 (10 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$195</div>
+                    </div>
+                    <div class="text-4xl">🛡️</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Péptido inmunomodulador de 28 aminoácidos.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Refuerzo inmunológico y reducción de inflamación.</p>
+                <p class="text-xs italic text-[#0A2540]">Dejas de enfermarte con frecuencia y reduces inflamación general.</p>
+            </div>
+
+            <!-- PT-141 -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">PT-141 (10 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$135</div>
+                    </div>
+                    <div class="text-4xl">❤️</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Agonista de los receptores de melanocortina.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Optimización de la libido y energía vital.</p>
+                <p class="text-xs italic text-[#0A2540]">Aumento natural y potente del deseo y respuesta física.</p>
+            </div>
+
+            <!-- DSIP -->
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">DSIP (10 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$150</div>
+                    </div>
+                    <div class="text-4xl">🌙</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Delta Sleep-Inducing Peptide.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Sueño profundo, reparación hormonal y reducción de cortisol.</p>
+                <p class="text-xs italic text-[#0A2540]">Sueño Delta más rápido, despertar descansado y estrés bajo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 3: ESTÁNDAR DE PUREZA -->
+<section class="section navy-bg text-white py-20 px-8 lg:px-16">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 text-[#D1E0F0] text-sm font-medium px-6 py-3 rounded-3xl mb-8">
+            <i class="fas fa-shield-halved"></i>
+            EL ESTÁNDAR DE PUREZA PEAKPURE
+        </div>
+        <h2 class="title-font text-5xl font-bold">"En PeakPure Biotech, la pureza es nuestra obsesión."</h2>
+        <p class="text-[#D1E0F0] mt-10 max-w-2xl mx-auto">
+            Cada uno de nuestros viales pasa por un proceso de purificación por cromatografía líquida de alta resolución (HPLC) y liofilización al vacío. 
+            Esto garantiza un producto libre de impurezas y con una estabilidad molecular superior.
+        </p>
+        <p class="text-emerald-400 mt-12 font-medium">Pureza científica para resultados reales.</p>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section light-bg py-24 text-center px-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="title-font text-7xl font-bold text-[#0A2540]">¿Cuál vas a probar primero?</h1>
+        <p class="text-[#2C5A7E] text-2xl mt-6">Elige tu péptido y eleva tu rendimiento hoy mismo.</p>
+        
+        <a href="https://linktr.ee/peakpure" target="_blank" class="mt-12 inline-flex items-center justify-center gap-4 bg-emerald-500 hover:bg-emerald-600 text-white text-2xl font-bold px-16 py-7 rounded-3xl shadow-xl">
+            <i class="fab fa-whatsapp text-5xl"></i>
+            Consultar disponibilidad
+        </a>
+        
+        <p class="mt-6 text-sm text-[#2C5A7E]">Respuesta inmediata por WhatsApp • Stock limitado</p>
+        
+        <div class="flex items-center justify-center gap-3 text-xs text-[#2C5A7E] mt-16">
+            <span class="font-bold title-font text-xl">PeakPure Biotech</span>
+            <span class="w-px h-3 bg-[#2C5A7E]"></span>
+            PUREZA • POTENCIA • RESULTADOS
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="navy-bg text-white py-12 text-center">
+    <p class="text-sm">© 2026 PeakPure Biotech • Guayaquil, Ecuador</p>
+    <p class="text-[#D1E0F0] text-xs mt-3">Péptidos premium • Resultados reales • Pureza garantizada</p>
+</footer>
+
+</body>
+</html>
