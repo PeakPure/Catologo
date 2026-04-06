@@ -9,42 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap');
-       
+        
         :root {
             --navy: #0A2540;
             --steel: #2C5A7E;
             --light: #F0F4F8;
         }
-       
+        
         * { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 200ms; }
-       
+        
         body {
             font-family: 'Open Sans', sans-serif;
         }
         .title-font {
             font-family: 'Montserrat', sans-serif;
         }
-       
+        
         .navy-bg { background-color: #0A2540; }
         .steel-text { color: #2C5A7E; }
         .light-bg { background-color: #F0F4F8; }
-       
+        
         .section {
             scroll-snap-align: start;
             min-height: 100vh;
         }
-       
+        
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 25px 25px 50px -12px rgb(10 37 64 / 0.15);
         }
-       
+        
         .holo-gradient {
             background: linear-gradient(90deg, #A8B5C4, #D1E0F0, #A8B5C4);
             background-size: 200% 200%;
             animation: holographic 4s linear infinite;
         }
-       
+        
         @keyframes holographic {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -53,7 +53,6 @@
     </style>
 </head>
 <body class="bg-[#F0F4F8]">
-<!-- NAVBAR -->
 <nav class="navy-bg text-white sticky top-0 z-50 shadow-lg">
     <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
         <div class="flex items-center gap-3">
@@ -67,7 +66,6 @@
     </div>
 </nav>
 
-<!-- SLIDE 1: HERO -->
 <section class="section grid grid-cols-1 lg:grid-cols-2 min-h-screen">
     <div class="light-bg flex items-center px-8 lg:px-16 py-20">
         <div class="max-w-lg">
@@ -121,16 +119,14 @@
     </div>
 </section>
 
-<!-- SLIDE 2: TODOS LOS PRODUCTOS -->
 <section class="section bg-white py-20 px-8 lg:px-16">
     <div class="max-w-7xl mx-auto">
         <div class="flex items-center gap-x-3 mb-8">
             <i class="fas fa-cubes text-3xl text-[#2C5A7E]"></i>
             <h2 class="title-font text-5xl font-bold text-[#0A2540]">Nuestra Línea de Péptidos</h2>
         </div>
-       
+        
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- SEMAX -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -144,7 +140,6 @@
                 <p class="text-xs italic text-[#0A2540]">Notarás una "claridad mental" inmediata. Las tareas complejas se vuelven más sencillas, desaparece la neblina mental.</p>
             </div>
             
-            <!-- SELANK -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -158,7 +153,6 @@
                 <p class="text-xs italic text-[#0A2540]">Calma y control bajo presión sin causar sueño. Te mantiene alerta y sin ruido mental.</p>
             </div>
             
-            <!-- GLOW 70 -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -172,7 +166,6 @@
                 <p class="text-xs italic text-[#0A2540]">Dolores crónicos remiten. Recuperación más rápida y piel más firme gracias al cobre.</p>
             </div>
             
-            <!-- RETATRUTIDE -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -186,7 +179,6 @@
                 <p class="text-xs italic text-[#0A2540]">Reducción drástica del apetito. Tu cuerpo usa grasa como energía sin fatiga extrema.</p>
             </div>
             
-            <!-- TIMOSSIN ALPHA 1 -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -200,7 +192,6 @@
                 <p class="text-xs italic text-[#0A2540]">Dejas de enfermarte con frecuencia y reduces inflamación general.</p>
             </div>
             
-            <!-- BB20 -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -214,7 +205,6 @@
                 <p class="text-xs italic text-[#0A2540]">Combinación potente para recuperación de lesiones, tendones y tejidos blandos. Ideal para deportistas y recuperación intensiva.</p>
             </div>
             
-            <!-- DSIP -->
             <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -227,11 +217,37 @@
                 <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Sueño profundo, reparación hormonal y reducción de cortisol.</p>
                 <p class="text-xs italic text-[#0A2540]">Sueño Delta más rápido, despertar descansado y estrés bajo.</p>
             </div>
+
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">TESAMORELIN (10 mg)</h3>
+                        <div class="text-emerald-600 font-semibold">$180</div>
+                    </div>
+                    <div class="text-4xl">💎</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Análogo del factor liberador de hormona de crecimiento (GHRH).</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Reducción de grasa abdominal visceral y optimización de GH natural.</p>
+                <p class="text-xs italic text-[#0A2540]">Enfoque específico en la grasa abdominal más difícil mientras mejora la composición corporal.</p>
+            </div>
+
+            <div class="bg-[#F0F4F8] rounded-3xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-2xl text-[#0A2540]">MK-677 (Ibutamoren)</h3>
+                        <div class="text-emerald-600 font-semibold">$170</div>
+                    </div>
+                    <div class="text-4xl">📈</div>
+                </div>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Componentes:</strong> Secretagogo de la hormona de crecimiento no peptídico.</p>
+                <p class="text-sm text-[#2C5A7E] mb-3"><strong>Beneficios:</strong> Incremento de masa muscular magra, densidad ósea y recuperación nocturna.</p>
+                <p class="text-xs italic text-[#0A2540]">Promueve la liberación sostenida de IGF-1. Ideal para ganar volumen y mejorar la calidad del sueño.</p>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- SLIDE 3: ESTÁNDAR DE PUREZA -->
 <section class="section navy-bg text-white py-20 px-8 lg:px-16">
     <div class="max-w-4xl mx-auto text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 text-[#D1E0F0] text-sm font-medium px-6 py-3 rounded-3xl mb-8">
@@ -247,19 +263,18 @@
     </div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="section light-bg py-24 text-center px-8">
     <div class="max-w-2xl mx-auto">
         <h1 class="title-font text-7xl font-bold text-[#0A2540]">¿Cuál vas a probar primero?</h1>
         <p class="text-[#2C5A7E] text-2xl mt-6">Elige tu péptido y eleva tu rendimiento hoy mismo.</p>
-       
+        
         <a href="https://linktr.ee/peakpure" target="_blank" class="mt-12 inline-flex items-center justify-center gap-4 bg-emerald-500 hover:bg-emerald-600 text-white text-2xl font-bold px-16 py-7 rounded-3xl shadow-xl">
             <i class="fab fa-whatsapp text-5xl"></i>
             Consultar disponibilidad
         </a>
-       
+        
         <p class="mt-6 text-sm text-[#2C5A7E]">Respuesta inmediata por WhatsApp • Stock limitado</p>
-       
+        
         <div class="flex items-center justify-center gap-3 text-xs text-[#2C5A7E] mt-16">
             <span class="font-bold title-font text-xl">PeakPure Biotech</span>
             <span class="w-px h-3 bg-[#2C5A7E]"></span>
@@ -268,7 +283,6 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="navy-bg text-white py-12 text-center">
     <p class="text-sm">© 2026 PeakPure Biotech • Guayaquil, Ecuador</p>
     <p class="text-[#D1E0F0] text-xs mt-3">Péptidos premium • Resultados reales • Pureza garantizada</p>
