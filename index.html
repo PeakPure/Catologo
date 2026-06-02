@@ -1961,11 +1961,10 @@ function pp2Val(){
     alert("⚠️ Por favor completa todos los campos y selecciona tu ciudad.");
     return null;
   }
-  var reg=cv.split("|")[0];
   var city=cv.split("|")[1];
   var pr=PP2P[pp2Key];
-  if(!pr||!pr[reg]){alert("Selecciona una ciudad válida.");return null;}
-  var tv=pr[reg].t*qty; var cv2=pr[reg].c*qty;
+  if(!pr){alert("Selecciona una ciudad válida.");return null;}
+  var tv=pr.t*qty; var cv2=pr.c*qty;
   return{n:n,c:c,t:t,d:d,p:p||"—",city:city,tv:tv,cv2:cv2};
 }
 
