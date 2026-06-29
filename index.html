@@ -313,6 +313,94 @@ p.lead-w{font-size:1.05rem;color:#D1E0F0;line-height:1.75;}
 #coaModal img{max-width:900px;width:100%;max-height:90vh;object-fit:contain;border-radius:8px;cursor:default;transform-origin:center;transition:transform .2s;}
 #coaModalClose{position:fixed;top:16px;right:20px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:1.3rem;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:inherit;z-index:100000;}
 #coaModalClose:hover{background:rgba(255,255,255,.28);}
+
+/* ── iPhone Mobile Optimizations ── */
+@media(max-width:430px){
+
+  /* General spacing */
+  .sec{padding:2rem 1rem;}
+  .sec-title{font-size:1.4rem !important;}
+  h1.big,h1.bigw{font-size:1.6rem !important;}
+  h2.sec-title,h2.sec-title-w{font-size:1.4rem !important;}
+
+  /* Hero section */
+  .hero-left{padding:2rem 1rem;}
+  .hero-right{padding:1.5rem 1rem;min-height:200px;}
+  .hero-cards{grid-template-columns:1fr 1fr;gap:.6rem;}
+
+  /* Catalog grid - 1 column */
+  .grid-2,.grid-3{grid-template-columns:1fr !important;}
+
+  /* Calculator */
+  #calc-objetivo,#calc-peso{font-size:.85rem;}
+  #calc-resultado{flex-direction:column;align-items:flex-start;}
+  #calc-btn{width:100%;text-align:center;}
+
+  /* Testimonials - 1 column */
+  div[style*="minmax(270px,1fr)"],
+  div[style*="minmax(260px,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Why PeakPure cards */
+  div[style*="minmax(260px,1fr)"] > div{
+    padding:16px 14px;
+  }
+
+  /* Stacks cards */
+  div[style*="minmax(270px,1fr)"] > div{
+    padding:16px 14px;
+  }
+
+  /* Protocol tables - horizontal scroll */
+  table{
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    font-size:.78rem;
+    white-space:nowrap;
+  }
+  table th,table td{
+    padding:8px 10px;
+    font-size:.76rem;
+  }
+
+  /* Protocol cards */
+  .card{padding:1.2rem 1rem;}
+
+  /* FAQ items */
+  .faq-item{padding:1rem 0;}
+  .faq-item h4{font-size:.88rem;}
+
+  /* Checkout modal */
+  .pp2-modal{padding:1rem;}
+  .pp2-hd{padding:.8rem 1rem;}
+
+  /* Nav */
+  .sec{padding-left:1rem;padding-right:1rem;}
+
+  /* Back to top button - above mobile CTA */
+  #back-top{bottom:80px;}
+
+  /* Info boxes in protocols */
+  .info-box{padding:14px;}
+
+  /* Stacks section title area */
+  div[style*="gap:12px;margin-bottom:.5rem"] i{
+    font-size:1.4rem;
+  }
+
+  /* Why PeakPure icon boxes */
+  div[style*="width:42px;height:42px"]{
+    width:36px !important;
+    height:36px !important;
+  }
+
+  /* Reconstitution section */
+  div[style*="overflow-x:auto"]{
+    font-size:.78rem;
+  }
+}
 </style>
 <script>
 var COAS={};
@@ -518,12 +606,12 @@ Object.assign(COAS,{
       </div>
       <div style="display:flex;align-items:center;gap:7px;">
         <span style="color:#f59e0b;letter-spacing:1px;font-size:.9rem;">★★★★★</span>
-        <span style="font-size:.78rem;color:#6b7280;font-weight:600;">4.9/5 · 6 reseñas</span>
+        <span style="font-size:.78rem;color:#6b7280;font-weight:600;">4.9/5 · 20 reseñas</span>
       </div>
     </div>
-    <div class="grid-2">
+        <div class="grid-2">
 
-      <div class="card anim-up d1">
+      <div class="card anim-up d1" id="card-semax">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">SEMAX (10 mg)</h3><div class="price">$135</div></div>
         </div>
@@ -540,7 +628,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d2">
+      <div class="card anim-up d2" id="card-selank">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">SELANK (10 mg)</h3><div class="price">$145</div></div>
         </div>
@@ -557,7 +645,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d3">
+      <div class="card anim-up d3" id="card-glow">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">GLOW (70mg)</h3><div class="price">$240</div></div>
         </div>
@@ -574,7 +662,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d4">
+      <div class="card anim-up d4" id="card-retatrutide">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">RETATRUTIDE (20 mg)</h3><div class="price">$300</div></div>
         </div>
@@ -591,7 +679,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d5">
+      <div class="card anim-up d5" id="card-timossin">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">TIMOSSIN ALPHA 1 (10 mg)</h3><div class="price">$195</div></div>
         </div>
@@ -608,7 +696,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d6">
+      <div class="card anim-up d6" id="card-wolverine">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">WOLVERINE (20mg)</h3><div class="price">$180</div></div>
         </div>
@@ -625,7 +713,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d7">
+      <div class="card anim-up d7" id="card-dsip">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">DSIP (10 mg)</h3><div class="price">$160</div></div>
         </div>
@@ -642,7 +730,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d8">
+      <div class="card anim-up d8" id="card-tesamorelin">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">TESAMORELIN (10 mg)</h3><div class="price">$190</div></div>
         </div>
@@ -659,7 +747,7 @@ Object.assign(COAS,{
         <div style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:20px;font-size:.7rem;font-weight:700;color:#166534;margin-top:.55rem;">🚚 Envío gratis</div>
       </div>
 
-      <div class="card anim-up d9">
+      <div class="card anim-up d9" id="card-cjc">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;">
           <div><h3 class="tf" style="font-weight:700;font-size:1.2rem;color:#0A2540;margin:0;">CJC-1295 NO DAC + IPAMORELIN</h3><div class="price">$200</div></div>
         </div>
@@ -693,58 +781,316 @@ Object.assign(COAS,{
 
       <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
         <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
-        <p style="font-size:.85rem;color:#374151;line-height:1.65;margin-bottom:12px;font-style:italic;">"Llevo 3 meses con Retatrutide y bajé 8 kg sin perder masa muscular. El envío llegó rapidísimo a Guayaquil y el COA me dio total confianza."</p>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Llegó perfecto y rápido. El kit venía completo con todo lo necesario. Muy profesionales."</p>
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A2540,#2C5A7E);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.8rem;flex-shrink:0;">MR</div>
-          <div><div style="font-weight:700;font-size:.83rem;color:#0A2540;">Marcos R.</div><div style="font-size:.72rem;color:#9ca3af;">📍 Guayaquil · Retatrutide 20mg</div></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">CM</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Carlos M.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Tena · GLOW 70mg</div>
+          </div>
         </div>
       </div>
 
       <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
         <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
-        <p style="font-size:.85rem;color:#374151;line-height:1.65;margin-bottom:12px;font-style:italic;">"El Semax mejoró mi concentración desde la primera semana. Trabajo en consultoría y la diferencia en mi rendimiento mental fue inmediata."</p>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Qué emoción cuando llegó. El empaque es muy profesional y seguro. Lo recomiendo totalmente."</p>
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A2540,#2C5A7E);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.8rem;flex-shrink:0;">AC</div>
-          <div><div style="font-weight:700;font-size:.83rem;color:#0A2540;">Andrés C.</div><div style="font-size:.72rem;color:#9ca3af;">📍 Quito · Semax 10mg</div></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">AR</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Andrea R.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Guayaquil · Retatrutide 20mg</div>
+          </div>
         </div>
       </div>
 
       <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
         <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
-        <p style="font-size:.85rem;color:#374151;line-height:1.65;margin-bottom:12px;font-style:italic;">"El WOLVERINE 20mg después de mi operación de rodilla fue un antes y un después. Recuperación mucho más rápida. El pago por tarjeta, sin problemas."</p>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Ya manejo dosis más altas y siguen siendo mi proveedor fijo. Serios, confiables y rápidos."</p>
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A2540,#2C5A7E);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.8rem;flex-shrink:0;">PV</div>
-          <div><div style="font-weight:700;font-size:.83rem;color:#0A2540;">Patricia V.</div><div style="font-size:.72rem;color:#9ca3af;">📍 Cuenca · WOLVERINE (20mg)</div></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">JV</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Jorge V.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Quito · Retatrutide 20mg</div>
+          </div>
         </div>
       </div>
 
       <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
         <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
-        <p style="font-size:.85rem;color:#374151;line-height:1.65;margin-bottom:12px;font-style:italic;">"Lo que más me convenció fue el COA de Freedom Diagnostics. Pureza 99%+ verificada. El Selank para el estrés es espectacular."</p>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Todo en perfecto estado. El acompañamiento por WhatsApp durante el protocolo es excelente."</p>
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A2540,#2C5A7E);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.8rem;flex-shrink:0;">DM</div>
-          <div><div style="font-weight:700;font-size:.83rem;color:#0A2540;">Dr. Diego M.</div><div style="font-size:.72rem;color:#9ca3af;">📍 Quito · Selank 10mg</div></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">ML</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">María L.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Guaranda · Tesamorelin 10mg</div>
+          </div>
         </div>
       </div>
 
       <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
         <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
-        <p style="font-size:.85rem;color:#374151;line-height:1.65;margin-bottom:12px;font-style:italic;">"Pedí el GLOW 70 y llegó en perfectas condiciones a Ambato. La atención por WhatsApp fue inmediata. Ya tengo mi segundo pedido."</p>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Chevere el paquete, todo organizado, bien sellado y con instrucciones muy claras."</p>
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A2540,#2C5A7E);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.8rem;flex-shrink:0;">KS</div>
-          <div><div style="font-weight:700;font-size:.83rem;color:#0A2540;">Karla S.</div><div style="font-size:.72rem;color:#9ca3af;">📍 Ambato · GLOW (70mg)</div></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">DS</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Diego S.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Ambato · WOLVERINE 20mg</div>
+          </div>
         </div>
       </div>
 
       <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
         <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
-        <p style="font-size:.85rem;color:#374151;line-height:1.65;margin-bottom:12px;font-style:italic;">"Muy profesionales. El DSIP mejoró mi calidad de sueño desde la primera semana. El proceso de compra fue súper fácil. 100% recomendado."</p>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Muy buena atención desde el primer mensaje. Llegó antes de lo esperado. Volveré a pedir."</p>
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A2540,#2C5A7E);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.8rem;flex-shrink:0;">LF</div>
-          <div><div style="font-weight:700;font-size:.83rem;color:#0A2540;">Luis F.</div><div style="font-size:.72rem;color:#9ca3af;">📍 Loja · DSIP 10mg</div></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">PG</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Paola G.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Cuenca · Selank 10mg</div>
+          </div>
         </div>
       </div>
 
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Primera vez usando péptidos y me explicaron todo paso a paso. Muy profesionales y pacientes."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">RF</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Roberto F.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Loja · DSIP 10mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"El packaging es hermoso, parece producto importado de primer nivel. Calidad increíble."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">VT</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Valeria T.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Manta · GLOW 70mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Llegó a Riobamba en 2 días por Servientrega. Impresionado con la rapidez del envío."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">SC</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Sebastián C.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Riobamba · CJC-1295</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"El COA de Freedom Diagnostics me dio toda la confianza. Producto 100% verificado y puro."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">DP</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Daniela P.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Quito · Retatrutide 20mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Recuperación de rodilla mucho más rápida de lo que esperaba. Lo recomiendo sin dudar."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">AH</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Andrés H.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Guayaquil · WOLVERINE 20mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Excelente servicio, me orientaron perfectamente sobre el protocolo a seguir. Muy atentos."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">CV</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Camila V.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Ibarra · Timossin Alpha 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Kit completísimo, vinieron las jeringas, el agua BAC y hasta las torundas. Todo incluido."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">LB</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Luis B.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Portoviejo · Semax 10mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Confidencialidad total en el envío. Llegó discreto y en perfectas condiciones. Gracias."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">GN</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Gabriela N.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Cuenca · Tesamorelin 10mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Llevo 3 pedidos y siempre impecable. Son los únicos en Ecuador en quienes confío."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">ME</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Marco E.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Santo Domingo · Retatrutide 20mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Me sorprendió la calidad del empaque. Se nota que cuidan cada detalle del producto."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">SA</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Sofía A.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Quito · GLOW 70mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"El PIN de entrega me dio mucha seguridad. Nadie más puede recibir mi pedido. Genial."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">FO</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Fernando O.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Machala · CJC-1295</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Responden rápido por WhatsApp y resuelven todas las dudas con paciencia y conocimiento."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">NR</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Natalia R.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Ambato · Selank 10mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"Nunca pensé que iba a dormir tan bien. El protocolo personalizado que me dieron fue clave."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">PJ</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Pablo J.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Esmeraldas · DSIP 10mg</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="color:#f59e0b;font-size:.95rem;margin-bottom:8px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-size:.85rem;color:#374151;line-height:1.6;margin-bottom:16px;">"De verdad el mejor servicio que he tenido comprando en Ecuador. Vuelvo siempre sin duda."</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;">IC</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:600;color:#111827;">Isabella C.</div>
+            <div style="font-size:.75rem;color:#6b7280;">📍 Guayaquil · Retatrutide 20mg</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Why PeakPure section -->
+    <div class="anim-up" style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:.5rem;">
+        <i class="fa-solid fa-award" style="font-size:1.7rem;color:#f59e0b;"></i>
+        <h2 class="tf sec-title" style="margin:0;">Por qué elegir PeakPure Biotech</h2>
+      </div>
+      <p style="color:#6b7280;font-size:.88rem;margin-bottom:28px;margin-left:2px;">El estándar más alto en péptidos de investigación en Ecuador</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+
+        <div style="background:#0A2540;border-radius:14px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fa-solid fa-certificate" style="color:#f59e0b;font-size:1.1rem;"></i>
+          </div>
+          <div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:5px;">Certificado por Freedom Diagnostics USA</div>
+            <div style="font-size:.78rem;color:#94a3b8;line-height:1.6;">Cada vial viene con COA verificable. Pureza 99%+ garantizada por laboratorio estadounidense independiente.</div>
+          </div>
+        </div>
+
+        <div style="background:#0A2540;border-radius:14px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fa-solid fa-box-open" style="color:#f59e0b;font-size:1.1rem;"></i>
+          </div>
+          <div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:5px;">Kit completo incluido</div>
+            <div style="font-size:.78rem;color:#94a3b8;line-height:1.6;">Vial, agua BAC, jeringa de activación, 5 jeringas de insulina, 5 alcohol pads y guía paso a paso. Sin extras que comprar.</div>
+          </div>
+        </div>
+
+        <div style="background:#0A2540;border-radius:14px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fa-brands fa-whatsapp" style="color:#f59e0b;font-size:1.1rem;"></i>
+          </div>
+          <div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:5px;">Acompañamiento real por WhatsApp</div>
+            <div style="font-size:.78rem;color:#94a3b8;line-height:1.6;">Te guiamos durante todo tu protocolo. Desde la reconstitución hasta la última dosis. Respuesta en minutos.</div>
+          </div>
+        </div>
+
+        <div style="background:#0A2540;border-radius:14px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fa-solid fa-shield-alt" style="color:#f59e0b;font-size:1.1rem;"></i>
+          </div>
+          <div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:5px;">Entrega con PIN de seguridad</div>
+            <div style="font-size:.78rem;color:#94a3b8;line-height:1.6;">En Guayaquil tu pedido solo lo recibes tú. Nadie más puede retirarlo sin el código de confirmación.</div>
+          </div>
+        </div>
+
+        <div style="background:#0A2540;border-radius:14px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fa-solid fa-shipping-fast" style="color:#f59e0b;font-size:1.1rem;"></i>
+          </div>
+          <div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:5px;">Envío a todo Ecuador</div>
+            <div style="font-size:.78rem;color:#94a3b8;line-height:1.6;">Entrega por Servientrega a cualquier ciudad. Discreto, seguro y con número de guía personalizado.</div>
+          </div>
+        </div>
+
+        <div style="background:#0A2540;border-radius:14px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fa-solid fa-vial" style="color:#f59e0b;font-size:1.1rem;"></i>
+          </div>
+          <div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:5px;">Stock disponible para envío inmediato</div>
+            <div style="font-size:.78rem;color:#94a3b8;line-height:1.6;">Sin esperas ni preorders. Péptidos certificados listos para despachar hoy mismo.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- Guarantee bar -->
@@ -881,7 +1227,7 @@ Object.assign(COAS,{
         <a href="https://wa.me/593988052945?text=Hola%2C%20estoy%20interesado%20en%20el%20p%C3%A9ptido%20Agua%20Bacteriost%C3%A1tica%20de%20PeakPure.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="wa-btn-sm"><i class="fab fa-whatsapp"></i> Consultar</a>
       </div>
 
-      <!-- RETATRUTIDE -->
+            <!-- RETATRUTIDE -->
       <div class="card anim-up d2">
         <h3 class="tf" style="font-size:1.4rem;font-weight:800;color:#0A2540;margin-bottom:1rem;">Retatrutide 20mg</h3>
         <p class="subtext"><strong>Componentes:</strong> GIP + GLP-1 + Glucagón Agonista</p>
@@ -893,7 +1239,7 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">Es la joya de la corona del control metabólico. Su triple acción permite quemar grasa mientras se protege el músculo, algo que ningún otro compuesto logra con tal eficiencia.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar una vez por semana.</p>
+          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar una vez por semana, cualquier día a la misma hora.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
@@ -949,14 +1295,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">Neuro-péptido que induce el sueño profundo (fase Delta) para reparación hormonal nocturna.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar 45 min antes de dormir.</p>
+          <p>Mezclar con <strong>3ml de Agua BAC</strong>. Aplicar 45 min antes de dormir.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1 - 2</td><td>0.25 mg</td><td>2.5 U</td><td>2 veces/sem</td></tr>
-            <tr><td>3 - 5</td><td>0.50 mg</td><td>5 U</td><td>2 veces/sem</td></tr>
-            <tr class="vial-end"><td>6 - 9</td><td>0.75 mg</td><td>7.5 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1 - 2</td><td>0.10 mg</td><td>3 U</td><td>Lun - Vie</td></tr>
+            <tr><td>3 - 8</td><td>0.25 mg</td><td>7.5 U</td><td>Lun - Vie</td></tr>
+            <tr class="vial-end"><td>9 - 10</td><td>0.15 mg</td><td>4.5 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Reparación celular profunda.</li><li>Optimización de la GH natural.</li><li>Reducción drástica del estrés.</li><li>Mejora el rendimiento cognitivo.</li><li>Despertar con energía real.</li></ul></div>
@@ -975,14 +1321,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">Nootrópico de élite para enfoque láser y protección neuronal.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar por las mañanas.</p>
+          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar de lunes a viernes, por las mañanas.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1 - 2</td><td>0.10 mg</td><td>1 U</td><td>Lun - Vie</td></tr>
-            <tr><td>3 - 10</td><td>0.15 mg</td><td>1.5 U</td><td>Lun - Vie</td></tr>
-            <tr class="vial-end"><td>11 - 13</td><td>0.20 mg</td><td>2 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1</td><td>0.30 mg</td><td>6 U</td><td>Lun - Vie</td></tr>
+            <tr><td>2 - 3</td><td>0.50 mg</td><td>10 U</td><td>Lun - Vie</td></tr>
+            <tr class="vial-end"><td>4</td><td>0.70 mg</td><td>14 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Foco total en tareas complejas.</li><li>Protección neuronal avanzada.</li><li>Mejora la retención de datos.</li><li>Aumenta la agilidad mental.</li><li>Resistencia al agotamiento mental.</li></ul></div>
@@ -1001,15 +1347,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">El aliado contra el estrés. Proporciona estabilidad emocional y paz mental sin efectos secundarios.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar en ayunas.</p>
+          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar de lunes a viernes, en ayunas.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1 - 2</td><td>0.15 mg</td><td>1.5 U</td><td>4 veces/sem</td></tr>
-            <tr><td>3 - 6</td><td>0.25 mg</td><td>2.5 U</td><td>4 veces/sem</td></tr>
-            <tr><td>7 - 8</td><td>0.30 mg</td><td>3 U</td><td>4 veces/sem</td></tr>
-            <tr class="vial-end"><td>9 - 11</td><td>0.20 mg</td><td>2 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1 - 2</td><td>0.25 mg</td><td>5 U</td><td>Lun - Vie</td></tr>
+            <tr><td>3 - 4</td><td>0.40 mg</td><td>8 U</td><td>Lun - Vie</td></tr>
+            <tr class="vial-end"><td>5 - 6</td><td>0.35 mg</td><td>7 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Control de ansiedad social y laboral.</li><li>Humor positivo y equilibrado.</li><li>Elimina el "ruido" mental.</li><li>Resiliencia ante situaciones difíciles.</li><li>Claridad emocional diaria.</li></ul></div>
@@ -1028,15 +1373,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">Tu escudo biológico. Optimiza la inmunidad y reduce la inflamación celular crónica.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar diariamente.</p>
+          <p>Mezclar con <strong>1ml de Agua BAC</strong>. Aplicar lunes y jueves, por las mañanas.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1</td><td>0.10 mg</td><td>1 U</td><td>Lun - Vie</td></tr>
-            <tr><td>2 - 5</td><td>0.20 mg</td><td>2 U</td><td>Lun - Vie</td></tr>
-            <tr><td>6 - 8</td><td>0.30 mg</td><td>3 U</td><td>Lun - Vie</td></tr>
-            <tr class="vial-end"><td>9 - 10</td><td>0.10 mg</td><td>1 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1</td><td>0.80 mg</td><td>8 U</td><td>2 veces/sem</td></tr>
+            <tr><td>2 - 3</td><td>1.60 mg</td><td>16 U</td><td>2 veces/sem</td></tr>
+            <tr class="vial-end"><td>4</td><td>1.00 mg</td><td>10 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Prevención avanzada de enfermedades.</li><li>Reducción de inflamación sistémica.</li><li>Acelera sanación de tejidos.</li><li>Vigor y vitalidad renovada.</li><li>Recuperación rápida de gripes.</li></ul></div>
@@ -1055,14 +1399,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">Combinación potente para recuperación de lesiones, tendones y tejidos blandos. Ideal para deportistas y recuperación intensiva.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar según protocolo.</p>
+          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar de lunes a viernes, por las mañanas.</p>
         </div>
         <table>
           <thead><tr><th>Fase</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1 - 2</td><td>0.25 mg</td><td>2.5 U</td><td>Lun - Vie</td></tr>
-            <tr><td>3 - 6</td><td>0.50 mg</td><td>5 U</td><td>Lun - Vie</td></tr>
-            <tr class="vial-end"><td>7 - 8</td><td>0.75 mg</td><td>7.5 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1 - 2</td><td>0.50 mg</td><td>5 U</td><td>Lun - Vie</td></tr>
+            <tr><td>3 - 4</td><td>1.00 mg</td><td>10 U</td><td>Lun - Vie</td></tr>
+            <tr class="vial-end"><td>5 - 6</td><td>0.50 mg</td><td>5 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Recuperación acelerada de lesiones.</li><li>Regeneración de tendones y ligamentos.</li><li>Mejora la salud intestinal (BPC-157).</li><li>Reducción de inflamación tisular.</li><li>Aumento de la flexibilidad y movilidad.</li></ul></div>
@@ -1081,14 +1425,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">Péptido especializado en la reducción de grasa visceral y mejora de la composición corporal mediante el aumento pulsátil de GH.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar antes de dormir.</p>
+          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar de lunes a viernes, antes de dormir.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1 - 2</td><td>0.10 mg</td><td>1 U</td><td>Lun - Vie</td></tr>
-            <tr><td>3 - 6</td><td>0.15 mg</td><td>1.5 U</td><td>Lun - Vie</td></tr>
-            <tr class="vial-end"><td>7 - 12</td><td>0.20 mg</td><td>2 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1 - 2</td><td>0.30 mg</td><td>6 U</td><td>Lun - Vie</td></tr>
+            <tr><td>3 - 4</td><td>0.50 mg</td><td>10 U</td><td>Lun - Vie</td></tr>
+            <tr class="vial-end"><td>5</td><td>0.40 mg</td><td>8 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Reducción significativa de grasa visceral.</li><li>Aumento natural de niveles de GH e IGF-1.</li><li>Mejora de la densidad ósea y masa magra.</li><li>Mejor recuperación muscular y energía.</li><li>Efecto lipolítico selectivo en abdomen.</li></ul></div>
@@ -1107,14 +1451,14 @@ Object.assign(COAS,{
         <p class="subtext" style="margin:.8rem 0;">El stack más popular para aumento de GH natural, recuperación, ganancia de músculo y quema de grasa. Perfecto para quienes buscan resultados sostenibles.</p>
         <div class="tip-box">
           <h4>🧪 Reconstitución (Jeringa 3ml):</h4>
-          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar 1 vez al día (preferiblemente antes de dormir o post-entreno).</p>
+          <p>Mezclar con <strong>2ml de Agua BAC</strong>. Aplicar de lunes a viernes, antes de dormir.</p>
         </div>
         <table>
           <thead><tr><th>Semana</th><th>Dosis</th><th>Jeringa de 50U</th><th>Frecuencia</th></tr></thead>
           <tbody>
-            <tr><td>1 - 2</td><td>0.10 mg</td><td>1 U</td><td>Lun - Vie</td></tr>
-            <tr><td>3 - 10</td><td>0.15 mg</td><td>1.5 U</td><td>Lun - Vie</td></tr>
-            <tr class="vial-end"><td>11 - 13</td><td>0.20 mg</td><td>2 U</td><td>Vial Agotado ✓</td></tr>
+            <tr><td>1 - 2</td><td>0.20 mg</td><td>4 U</td><td>Lun - Vie</td></tr>
+            <tr><td>3 - 6</td><td>0.30 mg</td><td>6 U</td><td>Lun - Vie</td></tr>
+            <tr class="vial-end"><td>7 - 8</td><td>0.20 mg</td><td>4 U</td><td>Vial Agotado ✓</td></tr>
           </tbody>
         </table>
         <div class="benefits"><h4>🏆 Top 5 Beneficios</h4><ul><li>Aumento pulsátil y natural de GH.</li><li>Mejora en recuperación muscular y sueño.</li><li>Ganancia de masa magra y quema de grasa.</li><li>Sin elevación significativa de cortisol.</li><li>Efectos sostenibles a largo plazo.</li></ul></div>
@@ -1130,7 +1474,54 @@ Object.assign(COAS,{
 <section class="sec white">
   <div class="max-wm">
     <div class="card anim-up" style="border-radius:24px;padding:3rem;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:2rem;">
+      <!-- STACKS RECOMENDADOS -->
+      <div class="anim-up" style="margin-bottom:36px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:.5rem;">
+          <i class="fa-solid fa-cubes" style="font-size:1.7rem;color:#f59e0b;"></i>
+          <h2 class="tf sec-title" style="margin:0;">Combinaciones Recomendadas</h2>
+        </div>
+        <p style="color:#6b7280;font-size:.88rem;margin-bottom:24px;margin-left:2px;">Stacks diseñados para maximizar resultados por objetivo.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;">
+
+          <div style="background:#0A2540;border-radius:14px;padding:20px;">
+            <div style="font-size:.7rem;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Stack Quema Total</div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:6px;">Retatrutide + Tesamorelin</div>
+            <div style="font-size:.76rem;color:#94a3b8;line-height:1.6;">Pérdida de grasa máxima. Retatrutide actúa sistémicamente y Tesamorelin elimina la grasa visceral mediante GH pulsátil.</div>
+          </div>
+
+          <div style="background:#0A2540;border-radius:14px;padding:20px;">
+            <div style="font-size:.7rem;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Stack Transformación Completa</div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:6px;">Retatrutide + GLOW 70mg</div>
+            <div style="font-size:.76rem;color:#94a3b8;line-height:1.6;">Pérdida de grasa combinada con regeneración celular, colágeno y elasticidad. Resultados visibles por dentro y por fuera.</div>
+          </div>
+
+          <div style="background:#0A2540;border-radius:14px;padding:20px;">
+            <div style="font-size:.7rem;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Stack Recuperación Elite</div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:6px;">Wolverine 20mg + Timossin Alpha 1</div>
+            <div style="font-size:.76rem;color:#94a3b8;line-height:1.6;">Recuperación de tejidos y lesiones deportivas potenciada con inmunidad celular. Ideal para atletas en proceso de rehabilitación.</div>
+          </div>
+
+          <div style="background:#0A2540;border-radius:14px;padding:20px;">
+            <div style="font-size:.7rem;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Stack Mente Clara</div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:6px;">Semax + Selank</div>
+            <div style="font-size:.76rem;color:#94a3b8;line-height:1.6;">Enfoque y rendimiento cognitivo con control emocional. Sin ansiedad ni sedación. El stack del alto rendimiento mental.</div>
+          </div>
+
+          <div style="background:#0A2540;border-radius:14px;padding:20px;">
+            <div style="font-size:.7rem;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Stack Anti-Age</div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:6px;">GLOW 70mg + CJC-1295</div>
+            <div style="font-size:.76rem;color:#94a3b8;line-height:1.6;">Regeneración de piel y tejidos combinada con estimulación nocturna de hormona de crecimiento. Anti-envejecimiento integral.</div>
+          </div>
+
+          <div style="background:#0A2540;border-radius:14px;padding:20px;">
+            <div style="font-size:.7rem;font-weight:700;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Stack Sueño Profundo</div>
+            <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:6px;">DSIP + CJC-1295</div>
+            <div style="font-size:.76rem;color:#94a3b8;line-height:1.6;">Sueño delta profundo con liberación de GH nocturna. Recuperación hormonal y reparación celular mientras descansas.</div>
+          </div>
+
+        </div>
+      </div>
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:2rem;">
         <i class="fas fa-question-circle" style="font-size:1.7rem;color:#2C5A7E;"></i>
         <h2 class="tf sec-title" style="margin:0;">Preguntas Frecuentes</h2>
       </div>
@@ -1729,7 +2120,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     <button class="pp2-x" onclick="pp2Close()">✕</button>
   </div>
   <div class="pp2-bd">
-    <div class="pp2-stk">⚡ Disponibles actualmente: 10 unidades</div>
+    <div class="pp2-stk">Disponibles actualmente: <span id="pp2-stock-num">10</span> unidades</div>
 
     <label>Ciudad de entrega</label>
     <select id="pp2-ciudad" onchange="pp2Prices()">
@@ -2081,6 +2472,51 @@ document.addEventListener("keydown",function(e){
   window.addEventListener('scroll',function(){
     btn.classList.toggle('show',window.scrollY>400);
   });
+})();
+</script>
+<script>
+(function(){
+  var MIN = 3; var MAX = 10;
+  var now = Date.now();
+
+  function getStock(productKey){
+    var KEY = 'pp2_stk_' + productKey;
+    var KEY_TS = 'pp2_stk_ts_' + productKey;
+    var saved = localStorage.getItem(KEY);
+    var ts = parseInt(localStorage.getItem(KEY_TS)||'0');
+    var stock;
+    if(!saved || (now - ts) > 86400000){
+      stock = Math.floor(Math.random()*(MAX-MIN+1))+MIN;
+      localStorage.setItem(KEY, stock);
+      localStorage.setItem(KEY_TS, now);
+    } else {
+      stock = parseInt(saved);
+    }
+    return stock;
+  }
+
+  function updateStock(productKey){
+    var el = document.getElementById('pp2-stock-num');
+    if(!el) return;
+    var key = productKey || 'default';
+    var stock = getStock(key);
+    el.textContent = stock;
+    var stkDiv = el.closest ? el.closest('.pp2-stk') : el.parentNode;
+    if(stkDiv){
+      stkDiv.style.color = stock <= 4 ? '#dc2626' : '';
+      stkDiv.style.fontWeight = stock <= 4 ? '700' : '';
+    }
+  }
+
+  // Init with default on page load
+  document.addEventListener('DOMContentLoaded', function(){ updateStock('default'); });
+
+  // Override buyOpen2 to pass product key
+  var origBuyOpen = window.buyOpen2;
+  window.buyOpen2 = function(key, disp){
+    if(origBuyOpen) origBuyOpen.apply(this, arguments);
+    setTimeout(function(){ updateStock(key || 'default'); }, 80);
+  };
 })();
 </script>
 </body></html>
